@@ -1,0 +1,52 @@
+# Sample files
+
+All assets in this directory are **original content created for konoma** — used as
+preview/thumbnail demo material and as test fixtures. They contain no third-party work
+and are covered by the project's MIT license.
+
+- `sample.png` — the project's key visual: artwork generated for konoma with Google Gemini,
+  with the wordmark and tagline composited by the project. No third-party imagery is used.
+- `sample.jpg` / `sample.gif` — generated with ImageMagick (gradients, shapes, and an
+  animated dot). `sample.gif` is a short original animation.
+- `sample.pdf` — a generated three-page text PDF (exercises PDF page navigation).
+- `sample.mp4` / `sample-hevc.mp4` / `sample.mkv` — an ffmpeg-generated test pattern (`testsrc2`,
+  320x240, 3s); no recorded footage. The same pattern encoded as **H.264** and as **HEVC (H.265,
+  Main profile)** in mp4, and as **H.264 in Matroska**, so the two built-in video decoders and the
+  two built-in container readers can be compared side by side — and so each has a fixture in the
+  test suite that proves a thumbnail comes out with no external tool installed.
+- `images.md` — demonstrates **inline block-level images** (Markdown `![]()` and HTML
+  `<img>`): the local `sample.png` / `sample.jpg`, plus remote `http(s)://` images
+  fetched at runtime (a placeholder raster and a shields.io badge — nothing is
+  committed here; they are downloaded into the user's cache on preview).
+- `sample.csv` / `sample.tsv` / `data.csv` — hand-written tables that exercise the CSV/TSV
+  table preview (rainbow columns, cell navigation, quoted commas, full-width CJK cells, and
+  long-value truncation).
+- `sample.xlsx` / `sample.ods` / `sample.xls` — spreadsheets for the spreadsheet preview
+  (one table per sheet, cells shown in their Excel number/date formats).
+- `sample.docx` / `sample.ja.docx` / `sample.odt` — original Word and OpenDocument text documents for the
+  document preview (headings, lists, tables, images). Written for konoma and exported with LibreOffice;
+  `sample.ja.docx` is the Japanese version (`.ja` suffix, like the other walkthrough demos).
+- `sample.pptx` / `sample.ja.pptx` / `sample.odp` — original PowerPoint and OpenDocument presentations for the
+  slide preview (a title slide, nested bullets, a two-column slide, a table, a picture with a caption, grouped shapes,
+  a hidden slide with speaker notes, hyperlinks). Written for konoma and exported with LibreOffice; `sample.ja.pptx`
+  is the Japanese version. Turn slides with `J`/`K`; `R` switches to the text view.
+- `sample.zip` / `sample.tar.gz` — exercise the archive-listing preview (entry name / size /
+  modified date in the same table renderer). Built by simply packing a few of this directory's
+  *other* sample files with the system `zip`/`tar` tools (`sample.zip` = `code/hello.rs`,
+  `code/app.ts`, `code/calc.c`, `code/main.go`; `sample.tar.gz` = `sample.csv`, `sample.tsv`,
+  `japanese.txt`) — no third-party content, same as everything else here.
+- `mermaid.md` / `mermaid.ja.md` — a gallery of every diagram kind konoma draws, one
+  ```` ```mermaid ```` fence each: flowchart, state, class, ER, sequence, zenuml, mindmap, kanban,
+  journey, timeline, gantt, requirement, gitGraph, C4, block, architecture, and the pie, xy,
+  quadrant, radar, treemap, packet and sankey charts. Written by hand for konoma.
+- `sequence.mmd`, `flowchart.mmd`, `gantt.mmd`, `architecture.mmd`, `pie.mmd` — hand-written
+  standalone Mermaid files, for the `.mmd` preview (a whole file rendered as one full-screen
+  diagram, as opposed to the fences above). The five cover different internal layouts.
+- `sample.svg`, the text / Markdown files, and everything under `code/` — written by hand
+  for konoma.
+- The walkthrough demos are **English by default**; the Japanese versions use a `.ja` suffix
+  (`markdown.ja.md`, `mermaid.ja.md`, `links.ja.md`, `long-lines.ja.txt`, `tutorial.ja.md`, `sample.ja.docx`, `sample.ja.pptx`). `japanese.txt` and the
+  full-width cells in `sample.csv` stay as CJK demos (they exercise konoma's CJK-width handling).
+
+If you add new sample files, only commit material you have the right to redistribute
+under MIT (your own work, CC0, or public domain).

@@ -8,8 +8,8 @@ repository.workspace = true
 description = "konoma's table plugins: CSV/TSV files and zip/tar/tar.gz listings shown as a grid"
 
 [dependencies]
-konoma-base = { path = "../konoma-base", version = "0.1.0" }
-konoma-plugin = { path = "../konoma-plugin", version = "0.1.0" }
+konoma-base = { version = "0.1.0" }
+konoma-plugin = { version = "0.1.0" }
 anyhow.workspace = true
 # CSV/TSV parsing. Pure Rust, no external dependencies (distribution stays easy, PRD §5): quoted
 # commas, embedded newlines and ragged rows are handled (a naive split breaks on them).
@@ -24,7 +24,7 @@ tar.workspace = true
 flate2.workspace = true
 
 [dev-dependencies]
-konoma-test-support = { path = "../konoma-test-support" }
+konoma-test-support = { version = "0.1.0" }
 
 [features]
 default = ["app"]
